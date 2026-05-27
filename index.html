@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Metadata -->
+  <title>ScaleCalc | Premium Client-Side Formula Calculators</title>
+  <meta name="description" content="Access a collection of beautiful, ultra-fast client-side financial, health, and mathematical calculators. Zero fees, zero installation.">
+  <meta name="keywords" content="mortgage calculator, compound interest calculator, bmi calculator, tdee calorie calculator, scientific calculator, online unit converter, client side math tools, secure calculations, offline calculator, free finance tools">
+  <meta name="author" content="ScaleCalc Team">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ScaleCalc | Premium Client-Side Formula Calculators">
+  <meta property="og:description" content="Access a collection of beautiful, ultra-fast client-side financial, health, and mathematical calculators. Zero fees, zero installation.">
+  
+  <!-- Tailwind CSS / Frame links NOT needed since we are building vanilla code -->
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <!-- Premium Glowing Parallax Background Blobs -->
+  <div class="bg-glow-blobs-container" aria-hidden="true">
+    <div class="blob-wrapper wrapper-1"><div class="bg-glow-blob blob-1"></div></div>
+    <div class="blob-wrapper wrapper-2"><div class="bg-glow-blob blob-2"></div></div>
+    <div class="blob-wrapper wrapper-3"><div class="bg-glow-blob blob-3"></div></div>
+  </div>
+
+  <!-- Premium Application Header -->
+  <header>
+    <div class="brand-container" id="brand-logo-btn" role="button" aria-label="ScaleCalc Home">
+      <div class="brand-logo" aria-hidden="true">∑</div>
+      <span class="brand-name">ScaleCalc</span>
+    </div>
+
+    <div class="header-actions">
+      <!-- Theme Switcher Button -->
+      <button id="btn-theme-toggle" title="Toggle Light/Dark Theme" style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-subtle); color: var(--text-primary); font-size: 1.05rem; width: 2.25rem; height: 2.25rem; display: grid; place-items: center; border-radius: 8px; cursor: pointer; transition: all 0.2s; outline: none; margin-right: 0.25rem;">
+        🌙
+      </button>
+
+      <!-- Currency Changer Selector -->
+      <div class="currency-select-wrapper" title="Change Base Currency">
+        <select id="header-currency-selector" aria-label="Currency Changer">
+          <!-- Popular Currencies -->
+          <optgroup label="Popular Currencies">
+            <option value="₹" selected>INR (₹) - Rupee</option>
+            <option value="$">USD ($) - Dollar</option>
+            <option value="€">EUR (€) - Euro</option>
+            <option value="£">GBP (£) - Pound</option>
+            <option value="AED">AED (Dh) - Dirham</option>
+            <option value="A$">AUD (A$) - Dollar</option>
+            <option value="C$">CAD (C$) - Dollar</option>
+            <option value="S$">SGD (S$) - Dollar</option>
+          </optgroup>
+          <!-- Other Currencies -->
+          <optgroup label="All Currencies">
+            <option value="¥">JPY (¥) - Yen</option>
+            <option value="CN¥">CNY (元) - Yuan</option>
+            <option value="CHF">CHF (Fr) - Franc</option>
+            <option value="SAR">SAR (SR) - Riyal</option>
+            <option value="KWD">KWD (KD) - Dinar</option>
+            <option value="QAR">QAR (QR) - Riyal</option>
+            <option value="OMR">OMR (RO) - Rial</option>
+            <option value="BHD">BHD (BD) - Dinar</option>
+            <option value="₺">TRY (₺) - Lira</option>
+            <option value="₽">RUB (₽) - Ruble</option>
+            <option value="R$">BRL (R$) - Real</option>
+            <option value="R">ZAR (R) - Rand</option>
+            <option value="NZ$">NZD (NZ$) - Dollar</option>
+            <option value="HK$">HKD (HK$) - Dollar</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <!-- Navigation & Auth Links -->
+      <nav class="nav-links" aria-label="Primary Navigation" style="margin-left: 0.5rem; display: inline-flex;">
+        <button class="nav-btn active" id="nav-dashboard">Dashboard</button>
+      </nav>
+
+      <!-- Glassmorphic Login / User Actions -->
+      <button class="nav-btn" id="btn-login-trigger" style="background: var(--accent-indigo-gradient); color: white; border: none; padding: 0.45rem 1rem; border-radius: 8px; font-weight: 600; box-shadow: var(--shadow-glow-indigo); cursor: pointer; transition: all 0.2s;">Login</button>
+      
+      <!-- User profile menu (initially hidden) -->
+      <div id="user-profile-menu" style="display: none; align-items: center; gap: 0.5rem; cursor: pointer;">
+        <div class="brand-logo" style="width: 1.85rem; height: 1.85rem; font-size: 0.9rem; background: var(--accent-emerald-gradient); border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: white;" id="user-avatar-initials">U</div>
+        <span style="font-size: 0.9rem; font-weight: 600;" id="user-display-name">Guest</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Stage -->
+  <main>
+    
+    <!-- 1. DASHBOARD VIEW (CATALOG) -->
+    <div id="dashboard-view">
+      
+      <!-- Hero Header Section -->
+      <section class="hero-section">
+        <div class="hero-badge">
+          <span>🚀 Premium Lifetime Suite</span>
+        </div>
+        <h1 class="hero-title">Powerful Calculations,<br>Zero Recurring Costs.</h1>
+        <p class="hero-subtitle">From EMI to investments, calculate everything instantly using fast, modern, reliable tools designed for the next generation</p>
+      </section>
+
+      <!-- Advanced Catalog Search and Filters -->
+      <section class="controls-container" aria-label="Search and filter controls">
+        <div class="search-wrapper">
+          <svg class="search-icon" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input 
+            type="text" 
+            id="search-calculators" 
+            class="search-input" 
+            placeholder="Search calculators (e.g. mortgage, BMI, unit)..." 
+            aria-label="Search calculators"
+          >
+        </div>
+        
+        <div class="categories-tabs" role="tablist" aria-label="Calculator categories">
+          <button class="category-tab active" data-category="all" role="tab" aria-selected="true">All Tools</button>
+          <button class="category-tab" data-category="finance" role="tab" aria-selected="false">Finance</button>
+          <button class="category-tab" data-category="health" role="tab" aria-selected="false">Health</button>
+          <button class="category-tab" data-category="utility" role="tab" aria-selected="false">Utility</button>
+          <button class="category-tab" data-category="bookmarks" role="tab" aria-selected="false">❤️ Bookmarks</button>
+        </div>
+      </section>
+
+      <!-- Calculators Card Grid -->
+      <section class="calculators-grid" id="calculators-catalog-grid" aria-live="polite">
+        <!-- Dynmically loaded from app.js -->
+      </section>
+      
+    </div>
+
+    <!-- 2. CALCULATOR VIEWPORT (ACTIVE CALCULATOR STAGE) -->
+    <div id="calculator-viewport" style="display: none;" aria-live="polite">
+      <!-- Dynamically rendered by engine.js based on selected tool -->
+    </div>
+
+  </main>
+
+  <!-- Premium Application Footer -->
+  <footer>
+    <div class="footer-content">
+      <span class="footer-text">&copy; 2026 ScaleCalc Platform. All rights reserved. Operating entirely offline.</span>
+      <div class="footer-links">
+        <button class="footer-link-btn" id="footer-btn-about">About Us</button>
+        <button class="footer-link-btn" id="footer-btn-privacy">Privacy Policy</button>
+        <button class="footer-link-btn" id="footer-btn-terms">Terms of Use</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- --- 1. GLASSMORPHIC LOGIN MODAL --- -->
+  <div id="login-modal-overlay" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="login-modal-title">Sign In</h2>
+        <button class="modal-close-btn" id="btn-login-close" aria-label="Close Login Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <form id="login-form" onsubmit="return false;" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="input-group">
+          <label class="input-label" for="login-email" style="margin-bottom: 0.5rem; display: block;">Username or Email</label>
+          <input type="text" id="login-email" class="field-input" placeholder="e.g. rushu" required value="rushu">
+        </div>
+        <div class="input-group" style="margin-bottom: 0.5rem;">
+          <label class="input-label" for="login-password" style="margin-bottom: 0.5rem; display: block;">Password</label>
+          <input type="password" id="login-password" class="field-input" placeholder="••••••••" required value="123456">
+        </div>
+        <button type="submit" class="nav-btn" style="background: var(--accent-indigo-gradient); color: white; border: none; padding: 0.85rem; border-radius: 8px; font-weight: 700; width: 100%; box-shadow: var(--shadow-glow-indigo); cursor: pointer;">
+          Authenticate
+        </button>
+        <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted);">Simulated local browser login</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- --- 2. LEGAL / ABOUT DISCLOSURE MODAL --- -->
+  <div id="legal-modal-overlay" class="modal-overlay">
+    <div class="modal-content" style="max-width: 600px;">
+      <div class="modal-header">
+        <h2 class="modal-title" id="legal-modal-title">Legal Disclosure</h2>
+        <button class="modal-close-btn" id="btn-legal-close" aria-label="Close Modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body-legal" id="legal-modal-body">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Modules -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
