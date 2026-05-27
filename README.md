@@ -1,53 +1,36 @@
-# 🌌 ScaleCalc | Premium Client-Side Suite
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-> *From EMI to investments, calculate everything instantly using fast, modern, reliable tools designed for the next generation.*
+## Getting Started
 
-ScaleCalc is a premium collection of **40+ offline-first, serverless client-side mathematical calculators** built to deliver high-performance evaluations instantly in the browser. Zero AI API subscriptions, zero recurring maintenance fees, and 100% data privacy.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## ✨ Premium Features
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-*   **⚡ 40+ Client-Side Tools**: Comprehensive calculation matrices spanning:
-    *   **Finance & Tax**: Dynamic EMI, Compound Interest, SIP Wealth Projections, progressive Income Tax Brackets, Auto Loan Amortizations, and Retirement Corpora.
-    *   **Health & Fitness**: Body Mass Index (BMI) gauges, TDEE daily calorie maintainer (Mifflin-St Jeor), BMR baseline metabolic calculations, Body Fat (US Navy tape standard), and Pace running splits.
-    *   **Math & Everyday Utilities**: Universal Unit Converter, Scientific computations, fraction arithmetic, Heron's Triangle solvers, Standard Deviations, Date shifts, and developer subnet/password calculators.
-*   **🎨 Midnight Glassmorphic Design**: Curated slate HSL colors, smooth radial background shadows, glowing interactive ranges, and clean modern typography.
-*   **☀️ Top Theme Toggle**: Swaps instantly between Midnight Glassmorphism and a beautiful high-contrast **Light Aurora Mode** with persisted local storage themes.
-*   **🌊 Glowing Parallax Animations**: Responsive hardware-accelerated 3D background glowing mesh blobs that float automatically and shift dynamically on scroll.
-*   **📈 Responsive Vector Graphics**: Hand-painted native SVG line graphs and health dials that recalculate instantly as you drag range sliders.
-*   **❤️ Favorites Priority Bubble**: Starred tools bubble up to the absolute top of the dashboard for quick launching.
-*   **🔒 100% Client-Side Privacy**: All mathematical entries, tax values, and search terms are processed in local browser memory with zero tracking cookies or external server calls.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🛠️ Technology Stack
+## Learn More
 
-*   **Structure**: Semantic HTML5 (SEO Optimized)
-*   **Styling**: High-fidelity Vanilla CSS Variables & Keyframe animations
-*   **Logic**: Native ES6 Javascript (Modular architecture, zero heavy external frameworks)
-*   **Graphics**: Native XML SVG Vector charts and gauges
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## 🚀 Quick Start / Local Setup
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Since ScaleCalc is a pure client-side static web application, it runs natively on any browser without compile pipelines or dependencies:
+## Deploy on Vercel
 
-1.  **Clone or Download this repository**:
-    ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-    cd YOUR_REPOSITORY
-    ```
-2.  **Run a lightweight server**:
-    You can open `index.html` directly in your browser, or run a local static server to load ES6 modules cleanly:
-    ```bash
-    npx http-server -p 8080
-    ```
-3.  Open `http://localhost:8080` in your web browser.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - free to distribute, modify, and host indefinitely without operational overhead.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
