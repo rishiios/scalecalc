@@ -43,6 +43,6 @@ export const defaultMetadata: Metadata = {
     description: 'Access a collection of beautiful, ultra-fast client-side financial, health, and mathematical calculators. Zero fees, zero installation.',
   },
   verification: {
-    google: 'ZGZpmaNjE4UCWaUgfR2bTePuJ_dSDERpNAlKOHOtt-c',
+    google: 'Ui5UYLwX7Db8TQySOVwU8sZlyVHUCYQoKOT1j6zA-F4',
   }
 };
