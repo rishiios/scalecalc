@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { calculators } from '@/lib/formulas';
 import { CalculatorSchema } from '@/lib/schema';
 import { motion, AnimatePresence } from 'framer-motion';
+import StandardCalculator from '@/components/StandardCalculator';
 
 export default function Dashboard() {
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -169,6 +170,20 @@ export default function Dashboard() {
           From EMI to investments, calculate everything instantly using fast, modern, reliable tools designed for the next generation
         </p>
       </section>
+
+      {/* Main Standard Calculator Front-and-Center */}
+      <div className="flex justify-center mb-12">
+        <div className="w-full max-w-md transform scale-100 sm:scale-105 origin-top transition-transform">
+          <StandardCalculator />
+        </div>
+      </div>
+
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-white/10 to-transparent my-10" />
+      
+      <div className="text-center mb-8">
+        <h2 className="font-sans font-black text-2xl md:text-3xl text-slate-900 dark:text-white">Explore Premium Suite</h2>
+        <p className="text-sm text-slate-500 dark:text-slate-400 mt-2">Discover our specialized financial, health, and utility calculators</p>
+      </div>
 
       {/* Dynamic Controls Grid */}
       <section className="max-w-3xl mx-auto p-4 md:p-6 bg-white/70 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/5 rounded-3xl backdrop-blur-xl shadow-xl space-y-5">
