@@ -349,52 +349,6 @@ export default function StandardCalculator() {
         </div>
       </section>
 
-      {/* Info section below the calculator */}
-      <section className="max-w-md mx-auto p-4 md:p-6 bg-white/70 dark:bg-slate-900/60 border border-slate-200/40 dark:border-white/5 rounded-3xl backdrop-blur-xl shadow-xl space-y-6">
-        <h3 className="font-sans font-black text-base text-slate-900 dark:text-white border-l-4 border-indigo-500 pl-3">
-          Features & Shortcuts
-        </h3>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {[
-            { icon: '⌨️', title: 'Full Keyboard Support', desc: 'Use your keyboard for lightning-fast calculations' },
-            { icon: '💾', title: 'Memory Functions', desc: 'MC, MR, M+, M- for storing intermediate results' },
-            { icon: '📊', title: 'Smart Formatting', desc: 'Numbers auto-format with Indian numeral commas' },
-            { icon: '🛡️', title: 'Error Safe', desc: 'Handles division by zero and overflow gracefully' },
-          ].map((feat, idx) => (
-            <div key={idx} className="p-4 bg-slate-100/30 dark:bg-white/5 border border-slate-200/20 dark:border-white/5 rounded-xl">
-              <div className="text-lg mb-2">{feat.icon}</div>
-              <h4 className="font-bold text-sm text-slate-900 dark:text-white">{feat.title}</h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{feat.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="space-y-3">
-          <h4 className="text-[10px] uppercase tracking-wider text-indigo-500 dark:text-indigo-400 font-sans font-black select-none">
-            Keyboard Shortcuts
-          </h4>
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            {[
-              ['0-9', 'Number input'],
-              ['+  -  *  /', 'Operators'],
-              ['Enter', 'Calculate (=)'],
-              ['Backspace', 'Delete last digit'],
-              ['Escape', 'Clear all (C)'],
-              ['.', 'Decimal point'],
-              ['%', 'Percentage'],
-              ['Delete', 'Clear all (C)'],
-            ].map(([shortcut, desc], idx) => (
-              <div key={idx} className="flex items-center gap-2">
-                <kbd className="px-2 py-1 bg-slate-200/50 dark:bg-white/10 text-slate-700 dark:text-slate-300 rounded font-mono text-[10px] border border-slate-300/30 dark:border-white/10">
-                  {shortcut}
-                </kbd>
-                <span className="text-slate-500 dark:text-slate-400">{desc}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
